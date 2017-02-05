@@ -26,22 +26,49 @@ namespace Estimate
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //button1.Text = (button1.Text == "<") ? {">"  } : { "<"};
-
+            TextBox IDObject = new TextBox();
+            TextBox NameObject = new TextBox();
             if (button1.Text == ">")
-            {
+            {            
                 button1.Text = "<";
-                button1.Location = new System.Drawing.Point(12, 0);
+                dataGridView1.Width -= Form1.ActiveForm.Width / 100 * 45; 
+                button1.Location = new System.Drawing.Point(button1.Location.X - Form1.ActiveForm.Width / 100 * 45, dataGridView1.Location.Y);
+               
+               // Splitter split = new Splitter();
+                
+                IDObject.Size = NameObject.Size = new System.Drawing.Size(51, 51);
+                Form1.ActiveForm.Controls.Add(IDObject);
+                Form1.ActiveForm.Controls.Add(NameObject);
+                //split.Location = new System.Drawing.Point(button1.Location.X+ 60, button1.Location.Y);
+                IDObject.Location = new System.Drawing.Point(button1.Location.X + button1.Width * 2, button1.Location.Y);
+                NameObject.Location = new System.Drawing.Point(IDObject.Location.X + IDObject.Width*2, IDObject.Location.Y);
+                
             }
             else
-            {
-                button1.Text = ">";
-                button1.Location = new System.Drawing.Point(dataGridView1.Width, dataGridView1.Location.Y);
-            }
+            { 
 
+                button1.Text = ">";
+                dataGridView1.Width += Form1.ActiveForm.Width / 100 * 45;
+                button1.Location = new System.Drawing.Point(dataGridView1.Width, dataGridView1.Location.Y);
+
+            }
+                //            Form1.ActiveForm.Controls.Remove(IDObject);
+                //Form1.ActiveForm.Controls.Remove(NameObject);
+                //IDObject.Dispose();
+                //NameObject.Dispose();
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
 
         }
