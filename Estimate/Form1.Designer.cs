@@ -63,7 +63,7 @@ namespace Estimate
             this.dataGridView1.DataSource = this.testTableBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 162);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1050, 445);
+            this.dataGridView1.Size = new System.Drawing.Size(1030, 445);
             this.dataGridView1.TabIndex = 0;
             // 
             // testIDDataGridViewTextBoxColumn

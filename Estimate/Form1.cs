@@ -49,7 +49,7 @@ namespace Estimate
 
                 button1.Text = ">";
                 dataGridView1.Width += Form1.ActiveForm.Width / 100 * 45;
-                button1.Location = new System.Drawing.Point(dataGridView1.Width, dataGridView1.Location.Y);
+                button1.Location = new System.Drawing.Point(dataGridView1.Location.X + dataGridView1.Width, dataGridView1.Location.Y);
 
             }
                 //            Form1.ActiveForm.Controls.Remove(IDObject);
