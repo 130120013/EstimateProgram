@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace Estimate
 {
+    /// <summary>
+    /// Main form with grid and common functions
+    /// </summary>
     public partial class Form1 : Form
     {
         public Form1()
@@ -24,6 +27,11 @@ namespace Estimate
 
         }
 
+        /// <summary>
+        /// Make shorter grid, move button and create sub-form for presenting information of row
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             TextBox IDObject = new TextBox();
@@ -58,9 +66,15 @@ namespace Estimate
                 //NameObject.Dispose();
         }
 
+        /// <summary>
+        /// On click show form for adding row
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Form2 f = new Form2();
+            f.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
