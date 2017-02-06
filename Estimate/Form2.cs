@@ -22,7 +22,7 @@ namespace Estimate
         {
             InitializeComponent();
         }
-        string connString = "Data Source=(LocalDb)\v11.0;Initial Catalog=Tables;Integrated Security=True; Provider=SQLOLEDB";
+
         /// <summary>
         /// Send insert-query
         /// </summary>
@@ -30,12 +30,39 @@ namespace Estimate
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
- 
-            OleDbConnection oldb = new OleDbConnection(connString);
-            if (oldb != null)
+            DataTable someDataTable = new DataTable();
+
+            string connString = @"Data Source=(LocalDb)\v11.0;Initial Catalog=Tables;Integrated Security=True";
+            SqlConnection oldb = new SqlConnection(connString);
+            try
             {
-                button1.Text = "111111111111111";
+                oldb.Open();
             }
+            catch (SqlException se)
+            {
+                Console.WriteLine("Ошибка подключения:{0}", se.Message);
+                return;
+            }
+            SqlCommand cmd = new SqlCommand("Insert into TestTable" +
+               "(RandomField) Values (@RandomField)", oldb);
+            SqlParameter param = new SqlParameter();
+            //задаем имя параметра
+            param.ParameterName = "@RandomField";
+            //задаем значение параметра
+            param.Value = textBox2.Text;
+            //задаем тип параметра
+            param.SqlDbType = SqlDbType.NVarChar;
+            //передаем параметр объекту класса SqlCommand
+            cmd.Parameters.Add(param);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                Console.Write("(((");
+            }
+
         }
 
         /// <summary>
