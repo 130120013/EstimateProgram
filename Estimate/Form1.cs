@@ -86,5 +86,15 @@ namespace Estimate
         {
 
         }
+
+        /// <summary>
+        /// On click delete seleted rows
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
