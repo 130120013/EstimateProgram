@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -85,6 +86,52 @@ namespace Estimate
         private void button5_Click(object sender, EventArgs e)
         {
 
+        }
+        /// <summary>
+        /// On click delete selected rows
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DataTable someDataTable = new DataTable();
+
+            string connString = @"Data Source=(LocalDb)\v11.0;Initial Catalog=Tables;Integrated Security=True";
+            SqlConnection oldb = new SqlConnection(connString);
+            try
+            {
+                oldb.Open();
+            }
+            catch (SqlException se)
+            {
+                Console.WriteLine("Ошибка подключения:{0}", se.Message);
+                return;
+            }
+            SqlCommand cmd = new SqlCommand("Delete From TestTable" +
+               " where TestID = @TestID", oldb);
+            SqlParameter param = new SqlParameter();
+            //задаем имя параметра
+            param.ParameterName = "@TestID";
+            //задаем значение параметра
+            var removed = dataGridView1.CurrentRow;
+            param.Value = dataGridView1.CurrentRow.Cells[0].Value;
+            //задаем тип параметра
+            param.SqlDbType = SqlDbType.Int;
+            //передаем параметр объекту класса SqlCommand
+            cmd.Parameters.Add(param);
+            try
+            {
+                cmd.ExecuteNonQuery();
+
+                //обновление таблицы
+                dataGridView1.Rows.Remove(removed);
+                dataGridView1.Refresh();
+            }
+            catch
+            {
+                Console.Write("(((");
+            }
+            
         }
     }
 }
