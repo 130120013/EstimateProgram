@@ -54,7 +54,16 @@ SELECT TestID, RandomField FROM TestTable WHERE (TestID = @TestID)</CommandText>
               <Mapping SourceColumn="TestID" DataSetColumn="TestID" />
               <Mapping SourceColumn="RandomField" DataSetColumn="RandomField" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="TablesConnectionString (Settings)" DbObjectName="Tables.dbo.TestTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TestID, RandomField FROM dbo.TestTable</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -64,7 +73,7 @@ SELECT TestID, RandomField FROM TestTable WHERE (TestID = @TestID)</CommandText>
   <xs:element name="TablesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TablesDataSet" msprop:Generator_UserDSName="TablesDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TestTable" msprop:Generator_TableClassName="TestTableDataTable" msprop:Generator_TableVarName="tableTestTable" msprop:Generator_TablePropName="TestTable" msprop:Generator_RowDeletingName="TestTableRowDeleting" msprop:Generator_RowChangingName="TestTableRowChanging" msprop:Generator_RowEvHandlerName="TestTableRowChangeEventHandler" msprop:Generator_RowDeletedName="TestTableRowDeleted" msprop:Generator_UserTableName="TestTable" msprop:Generator_RowChangedName="TestTableRowChanged" msprop:Generator_RowEvArgName="TestTableRowChangeEvent" msprop:Generator_RowClassName="TestTableRow">
+        <xs:element name="TestTable" msprop:Generator_TableClassName="TestTableDataTable" msprop:Generator_TableVarName="tableTestTable" msprop:Generator_RowChangedName="TestTableRowChanged" msprop:Generator_TablePropName="TestTable" msprop:Generator_RowDeletingName="TestTableRowDeleting" msprop:Generator_RowChangingName="TestTableRowChanging" msprop:Generator_RowEvHandlerName="TestTableRowChangeEventHandler" msprop:Generator_RowDeletedName="TestTableRowDeleted" msprop:Generator_RowClassName="TestTableRow" msprop:Generator_UserTableName="TestTable" msprop:Generator_RowEvArgName="TestTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TestID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTestID" msprop:Generator_ColumnPropNameInRow="TestID" msprop:Generator_ColumnPropNameInTable="TestIDColumn" msprop:Generator_UserColumnName="TestID" type="xs:int" />

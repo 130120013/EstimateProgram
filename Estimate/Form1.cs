@@ -16,6 +16,8 @@ namespace Estimate
     /// </summary>
     public partial class Form1 : Form
     {
+        private ADGV.AdvancedDataGridView dataGridView1 = new ADGV.AdvancedDataGridView();
+        private Cache memoryCache;
         public Form1()
         {
             InitializeComponent();
@@ -23,10 +25,52 @@ namespace Estimate
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.dataGridView1.VirtualMode = true;
+            this.dataGridView1.Location = new System.Drawing.Point(12, button1.Location.Y);
+            this.dataGridView1.Size = new Size(1869, button1.Height);
+            //this.dataGridView1.Dock = DockStyle.Fill;
+            this.dataGridView1.VirtualMode = true;
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = false;
+            this.dataGridView1.SelectionMode =
+                DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.CellValueNeeded += new
+                DataGridViewCellValueEventHandler(dataGridView1_CellValueNeeded);
+            this.Controls.Add(dataGridView1);
+            try
+            {
+                DataRetriever retriever =
+                    new DataRetriever(@"Data Source=(LocalDb)\v11.0;Initial Catalog=Tables;Integrated Security=True", "TestTable");
+                memoryCache = new Cache(retriever, 16);
+                foreach (DataColumn column in retriever.Columns)
+                {
+                    dataGridView1.Columns.Add(
+                        column.ColumnName, column.ColumnName);
+                }
+                this.dataGridView1.RowCount = retriever.RowCount;
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Connection could not be established. " +
+                    "Verify that the connection string is valid.");
+                Application.Exit();
+            }
+
+            // Adjust the column widths based on the displayed values.
+            this.dataGridView1.AutoResizeColumns(
+                DataGridViewAutoSizeColumnsMode.DisplayedCells);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "tablesDataSet.TestTable". При необходимости она может быть перемещена или удалена.
             this.testTableTableAdapter.Fill(this.tablesDataSet.TestTable);
 
         }
+
+        private void dataGridView1_CellValueNeeded(object sender,
+     DataGridViewCellValueEventArgs e)
+        {
+            e.Value = memoryCache.RetrieveElement(e.RowIndex, e.ColumnIndex);
+        }
+
 
         /// <summary>
         /// Make shorter grid, move button and create sub-form for presenting information of row
@@ -134,6 +178,19 @@ namespace Estimate
 
 
             
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.testTableTableAdapter.FillBy(this.tablesDataSet.TestTable);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }
