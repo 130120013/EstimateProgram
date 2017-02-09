@@ -42,7 +42,7 @@ namespace Estimate
             {
                 DataRetriever retriever =
                     new DataRetriever(@"Data Source=(LocalDb)\v11.0;Initial Catalog=Tables;Integrated Security=True", "TestTable");
-                memoryCache = new Cache(retriever, 10000000);
+                memoryCache = new Cache(retriever, 999999999999);
                 foreach (DataColumn column in retriever.Columns)
                 {
                     dataGridView1.Columns.Add(

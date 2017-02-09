@@ -9,16 +9,16 @@ namespace Estimate
 {
     public class Cache
     {
-        private static int RowsPerPage;
+        private static long RowsPerPage;
 
         // Represents one page of data.  
         public struct DataPage
         {
             public DataTable table;
-            private int lowestIndexValue;
-            private int highestIndexValue;
+            private long lowestIndexValue;
+            private long highestIndexValue;
 
-            public DataPage(DataTable table, int rowIndex)
+            public DataPage(DataTable table, long rowIndex)
             {
                 this.table = table;
                 lowestIndexValue = MapToLowerBoundary(rowIndex);
@@ -27,7 +27,7 @@ namespace Estimate
                 System.Diagnostics.Debug.Assert(highestIndexValue >= 0);
             }
 
-            public int LowestIndex
+            public long LowestIndex
             {
                 get
                 {
@@ -35,7 +35,7 @@ namespace Estimate
                 }
             }
 
-            public int HighestIndex
+            public long HighestIndex
             {
                 get
                 {
@@ -43,13 +43,13 @@ namespace Estimate
                 }
             }
 
-            public static int MapToLowerBoundary(int rowIndex)
+            public static long MapToLowerBoundary(long rowIndex)
             {
                 // Return the lowest index of a page containing the given index.
                 return (rowIndex / RowsPerPage) * RowsPerPage;
             }
 
-            private static int MapToUpperBoundary(int rowIndex)
+            private static long MapToUpperBoundary(long rowIndex)
             {
                 // Return the highest index of a page containing the given index.
                 return MapToLowerBoundary(rowIndex) + RowsPerPage - 1;
@@ -59,7 +59,7 @@ namespace Estimate
         private DataPage[] cachePages;
         private IDataPageRetriever dataSupply;
 
-        public Cache(IDataPageRetriever dataSupplier, int rowsPerPage)
+        public Cache(IDataPageRetriever dataSupplier, long rowsPerPage)
         {
             dataSupply = dataSupplier;
             Cache.RowsPerPage = rowsPerPage;
@@ -67,26 +67,26 @@ namespace Estimate
         }
 
         // Sets the value of the element parameter if the value is in the cache.
-        private bool IfPageCached_ThenSetElement(int rowIndex,
-            int columnIndex, ref string element)
+        private bool IfPageCached_ThenSetElement(long rowIndex,
+            long columnIndex, ref string element)
         {
             if (IsRowCachedInPage(0, rowIndex))
             {
                 element = cachePages[0].table
-                    .Rows[rowIndex % RowsPerPage][columnIndex].ToString();
+                    .Rows[(int)(rowIndex % RowsPerPage)][(int)columnIndex].ToString();
                 return true;
             }
             else if (IsRowCachedInPage(1, rowIndex))
             {
                 element = cachePages[1].table
-                    .Rows[rowIndex % RowsPerPage][columnIndex].ToString();
+                    .Rows[(int)(rowIndex % RowsPerPage)][(int)columnIndex].ToString();
                 return true;
             }
 
             return false;
         }
 
-        public string RetrieveElement(int rowIndex, int columnIndex)
+        public string RetrieveElement(long rowIndex, long columnIndex)
         {
             string element = null;
 
@@ -112,7 +112,7 @@ namespace Estimate
         }
 
         private string RetrieveData_CacheIt_ThenReturnElement(
-            int rowIndex, int columnIndex)
+            long rowIndex, long columnIndex)
         {
             // Retrieve a page worth of data containing the requested value.
             DataTable table = dataSupply.SupplyPageOfData(
@@ -127,13 +127,13 @@ namespace Estimate
 
         // Returns the index of the cached page most distant from the given index
         // and therefore least likely to be reused.
-        private int GetIndexToUnusedPage(int rowIndex)
+        private long GetIndexToUnusedPage(long rowIndex)
         {
             if (rowIndex > cachePages[0].HighestIndex &&
                 rowIndex > cachePages[1].HighestIndex)
             {
-                int offsetFromPage0 = rowIndex - cachePages[0].HighestIndex;
-                int offsetFromPage1 = rowIndex - cachePages[1].HighestIndex;
+                int offsetFromPage0 = (int)(rowIndex - cachePages[0].HighestIndex);
+                int offsetFromPage1 = (int)(rowIndex - cachePages[1].HighestIndex);
                 if (offsetFromPage0 < offsetFromPage1)
                 {
                     return 1;
@@ -142,8 +142,8 @@ namespace Estimate
             }
             else
             {
-                int offsetFromPage0 = cachePages[0].LowestIndex - rowIndex;
-                int offsetFromPage1 = cachePages[1].LowestIndex - rowIndex;
+                int offsetFromPage0 = (int)(cachePages[0].LowestIndex - rowIndex);
+                int offsetFromPage1 = (int)(cachePages[1].LowestIndex - rowIndex);
                 if (offsetFromPage0 < offsetFromPage1)
                 {
                     return 1;
@@ -155,7 +155,7 @@ namespace Estimate
 
         // Returns a value indicating whether the given row index is contained
         // in the given DataPage. 
-        private bool IsRowCachedInPage(int pageNumber, int rowIndex)
+        private bool IsRowCachedInPage(long pageNumber, long rowIndex)
         {
             return rowIndex <= cachePages[pageNumber].HighestIndex &&
                 rowIndex >= cachePages[pageNumber].LowestIndex;

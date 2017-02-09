@@ -9,6 +9,6 @@ namespace Estimate
 {
     public interface IDataPageRetriever
     {
-        DataTable SupplyPageOfData(int lowerPageBoundary, long rowsPerPage);
+        DataTable SupplyPageOfData(long lowerPageBoundary, long rowsPerPage);
     }
 }
