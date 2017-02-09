@@ -101,7 +101,7 @@ namespace Estimate
         private string columnToSortBy;
         private SqlDataAdapter adapter = new SqlDataAdapter();
 
-        public DataTable SupplyPageOfData(int lowerPageBoundary, int rowsPerPage)
+        public DataTable SupplyPageOfData(int lowerPageBoundary, long rowsPerPage)
         {
             // Store the name of the ID column. This column must contain unique 
             // values so the SQL below will work properly.

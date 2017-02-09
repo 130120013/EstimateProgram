@@ -42,7 +42,7 @@ namespace Estimate
             {
                 DataRetriever retriever =
                     new DataRetriever(@"Data Source=(LocalDb)\v11.0;Initial Catalog=Tables;Integrated Security=True", "TestTable");
-                memoryCache = new Cache(retriever, 16);
+                memoryCache = new Cache(retriever, 10000000);
                 foreach (DataColumn column in retriever.Columns)
                 {
                     dataGridView1.Columns.Add(
@@ -61,7 +61,7 @@ namespace Estimate
             this.dataGridView1.AutoResizeColumns(
                 DataGridViewAutoSizeColumnsMode.DisplayedCells);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "tablesDataSet.TestTable". При необходимости она может быть перемещена или удалена.
-            this.testTableTableAdapter.Fill(this.tablesDataSet.TestTable);
+           // this.testTableTableAdapter.Fill(this.tablesDataSet.TestTable);
 
         }
 
