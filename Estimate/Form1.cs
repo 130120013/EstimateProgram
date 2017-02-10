@@ -192,5 +192,23 @@ namespace Estimate
             }
 
         }
+        /// <summary>
+        /// On click compares some rows
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button7_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow c in dataGridView1.SelectedRows)
+            {
+                var q = c.Cells;
+                string rrrrr = "";
+                foreach (DataGridViewCell m in q)
+                {
+                    rrrrr = rrrrr + m.Value;
+                }
+                MessageBox.Show(null, rrrrr, "1111");
+            }
+        }
     }
 }
