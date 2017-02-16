@@ -18,6 +18,9 @@ namespace Estimate
     {
         private ADGV.AdvancedDataGridView dataGridView1 = new ADGV.AdvancedDataGridView();
         private Cache memoryCache;
+        private PleaseWaitForm f3 = new PleaseWaitForm();
+        private List<bool> initialized = new List<bool>();
+        private int columnIndex;
         public Form1()
         {
             InitializeComponent();
@@ -37,16 +40,21 @@ namespace Estimate
                 DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.CellValueNeeded += new
                 DataGridViewCellValueEventHandler(dataGridView1_CellValueNeeded);
+            this.dataGridView1.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(dataGridView1_ColumnHeaderMouseClick);
+            this.dataGridView1.CellMouseUp += new DataGridViewCellMouseEventHandler(dataGridView1_DataSourceComplete);
+            this.dataGridView1.CellMouseEnter += new DataGridViewCellEventHandler(cell);
+            //this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(dataGridView1_ColumnHeaderMouseClick);
             this.Controls.Add(dataGridView1);
             try
             {
                 DataRetriever retriever =
                     new DataRetriever(@"Data Source=(LocalDb)\v11.0;Initial Catalog=Tables;Integrated Security=True", "TestTable");
-                memoryCache = new Cache(retriever, 999999999999);
+                memoryCache = new Cache(retriever, 10000);
                 foreach (DataColumn column in retriever.Columns)
                 {
                     dataGridView1.Columns.Add(
                         column.ColumnName, column.ColumnName);
+                    initialized.Add(false);
                 }
                 this.dataGridView1.RowCount = retriever.RowCount;
             }
@@ -61,8 +69,37 @@ namespace Estimate
             this.dataGridView1.AutoResizeColumns(
                 DataGridViewAutoSizeColumnsMode.DisplayedCells);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "tablesDataSet.TestTable". При необходимости она может быть перемещена или удалена.
-           // this.testTableTableAdapter.Fill(this.tablesDataSet.TestTable);
+            // this.testTableTableAdapter.Fill(this.tablesDataSet.TestTable);
 
+            
+        }
+
+        private void cell(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex == 0)
+            columnIndex = e.ColumnIndex;
+        }
+        private void dataGridView1_ColumnHeaderMouseClick(object sender, EventArgs e)
+        {
+            if (columnIndex != 0 && initialized[columnIndex] == false)
+            {
+                initialized[columnIndex] = true;
+                if (!f3.IsHandleCreated)
+                {
+                    f3 = new PleaseWaitForm();
+                    f3.Show();
+                    f3.Update();
+                    System.Threading.Thread.Sleep(3000);
+                    this.Focus();
+                }
+            }
+
+        }
+
+        private void dataGridView1_DataSourceComplete(object sender, EventArgs e)
+        {
+            if(f3.IsHandleCreated)
+            f3.Close();
         }
 
         private void dataGridView1_CellValueNeeded(object sender,
@@ -71,6 +108,8 @@ namespace Estimate
             e.Value = memoryCache.RetrieveElement(e.RowIndex, e.ColumnIndex);
         }
 
+
+  
 
         /// <summary>
         /// Make shorter grid, move button and create sub-form for presenting information of row
@@ -209,6 +248,16 @@ namespace Estimate
                 }
                 MessageBox.Show(null, rrrrr, "1111");
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void advancedDataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
         }
     }
 }
