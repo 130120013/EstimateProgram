@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Estimate
 {
@@ -110,14 +111,16 @@ namespace Estimate
                 columnToSortBy = this.Columns[0].ColumnName;
             }
 
-            if (!this.Columns[columnToSortBy].Unique)
-            {
-                throw new InvalidOperationException(String.Format(
-                    "Column {0} must contain unique values.", columnToSortBy));
-            }
+            //if (!this.Columns[columnToSortBy].Unique)
+            //{
+            //    throw new InvalidOperationException(String.Format(
+            //        "Column {0} must contain unique values.", columnToSortBy));
+            //}
 
             // Retrieve the specified number of rows from the database, starting
             // with the row specified by the lowerPageBoundary parameter.
+
+            
             command.CommandText = "Select Top " + rowsPerPage + " " +
                 CommaSeparatedListOfColumnNames + " From " + tableName +
                 " WHERE " + columnToSortBy + " NOT IN (SELECT TOP " +
@@ -129,6 +132,7 @@ namespace Estimate
             DataTable table = new DataTable();
             table.Locale = System.Globalization.CultureInfo.InvariantCulture;
             adapter.Fill(table);
+Application.DoEvents();
             return table;
         }
 

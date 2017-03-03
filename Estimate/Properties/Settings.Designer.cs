@@ -32,5 +32,15 @@ namespace Estimate.Properties {
                 return ((string)(this["TablesConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SQL;Initial Catalog=advs_2_restored-Алина;Integrated Security=True")]
+        public string advs_2_restored_АлинаConnectionString {
+            get {
+                return ((string)(this["advs_2_restored_АлинаConnectionString"]));
+            }
+        }
     }
 }

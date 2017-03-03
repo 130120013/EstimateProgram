@@ -43,7 +43,9 @@
       <HintPath>..\packages\DataGridViewAutoFilter.1.0.0\lib\DataGridViewAutoFilter.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -114,6 +116,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TablesDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_advs_2_restored_АлинаDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_advs_2_restored_АлинаDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +162,17 @@
     </None>
     <None Include="TablesDataSet.xss">
       <DependentUpon>TablesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_advs_2_restored_АлинаDataSet.xsc">
+      <DependentUpon>_advs_2_restored_АлинаDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_advs_2_restored_АлинаDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_advs_2_restored_АлинаDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_advs_2_restored_АлинаDataSet.xss">
+      <DependentUpon>_advs_2_restored_АлинаDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
