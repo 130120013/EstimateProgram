@@ -84,6 +84,12 @@
   <ItemGroup>
     <Compile Include="Cache.cs" />
     <Compile Include="DataPageRetriever.cs" />
+    <Compile Include="Equality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equality.Designer.cs">
+      <DependentUpon>Equality.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_advs_2_restored_АлинаDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_advs_2_restored_АлинаDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_advs_2_restored_АлинаDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Equality.resx">
+      <DependentUpon>Equality.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +187,17 @@
     </None>
     <None Include="_advs_2_restored_АлинаDataSet.xss">
       <DependentUpon>_advs_2_restored_АлинаDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_advs_2_restored_АлинаDataSet1.xsc">
+      <DependentUpon>_advs_2_restored_АлинаDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_advs_2_restored_АлинаDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_advs_2_restored_АлинаDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_advs_2_restored_АлинаDataSet1.xss">
+      <DependentUpon>_advs_2_restored_АлинаDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
