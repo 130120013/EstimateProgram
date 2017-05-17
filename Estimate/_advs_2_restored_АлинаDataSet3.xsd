@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_advs_2_restored_АлинаDataSet3" targetNamespace="http://tempuri.org/_advs_2_restored_АлинаDataSet3.xsd" xmlns:mstns="http://tempuri.org/_advs_2_restored_АлинаDataSet3.xsd" xmlns="http://tempuri.org/_advs_2_restored_АлинаDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="advs_2_restored_АлинаConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="advs_2_restored_АлинаConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Estimate.Properties.Settings.GlobalReference.Default.advs_2_restored_АлинаConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PLTradeADVSTableAdapter" GeneratorDataComponentClassName="PLTradeADVSTableAdapter" Name="PLTradeADVS" UserDataComponentName="PLTradeADVSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="advs_2_restored_АлинаConnectionString (Settings)" DbObjectName="[advs_2_restored-Алина].dbo.PLTradeADVS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[PLTradeADVS] WHERE (((@IsNull_Number = 1 AND [Number] IS NULL) OR ([Number] = @Original_Number)) AND ((@IsNull_DateCreate = 1 AND [DateCreate] IS NULL) OR ([DateCreate] = @Original_DateCreate)) AND ((@IsNull_DateAdd = 1 AND [DateAdd] IS NULL) OR ([DateAdd] = @Original_DateAdd)) AND ((@IsNull_DateActual = 1 AND [DateActual] IS NULL) OR ([DateActual] = @Original_DateActual)) AND ((@IsNull_DateIns = 1 AND [DateIns] IS NULL) OR ([DateIns] = @Original_DateIns)) AND ((@IsNull_DateTimeIns = 1 AND [DateTimeIns] IS NULL) OR ([DateTimeIns] = @Original_DateTimeIns)) AND ((@IsNull_Source = 1 AND [Source] IS NULL) OR ([Source] = @Original_Source)) AND ((@IsNull_SourseRoot = 1 AND [SourseRoot] IS NULL) OR ([SourseRoot] = @Original_SourseRoot)) AND ([SourceFile] = @Original_SourceFile) AND ((@IsNull_PSourceFile = 1 AND [PSourceFile] IS NULL) OR ([PSourceFile] = @Original_PSourceFile)) AND ((@IsNull_AdvName = 1 AND [AdvName] IS NULL) OR ([AdvName] = @Original_AdvName)) AND ((@IsNull_AdvText = 1 AND [AdvText] IS NULL) OR ([AdvText] = @Original_AdvText)) AND ((@IsNull_AdvNum = 1 AND [AdvNum] IS NULL) OR ([AdvNum] = @Original_AdvNum)) AND ((@IsNull_Cost = 1 AND [Cost] IS NULL) OR ([Cost] = @Original_Cost)) AND ((@IsNull_CostType = 1 AND [CostType] IS NULL) OR ([CostType] = @Original_CostType)) AND ((@IsNull_addr_01_city = 1 AND [addr_01_city] IS NULL) OR ([addr_01_city] = @Original_addr_01_city)) AND ((@IsNull_addr_03_street = 1 AND [addr_03_street] IS NULL) OR ([addr_03_street] = @Original_addr_03_street)) AND ((@IsNull_addr_04_houseNum = 1 AND [addr_04_houseNum] IS NULL) OR ([addr_04_houseNum] = @Original_addr_04_houseNum)) AND ((@IsNull_addr_05_microdistrict = 1 AND [addr_05_microdistrict] IS NULL) OR ([addr_05_microdistrict] = @Original_addr_05_microdistrict)) AND ((@IsNull_AdvArea = 1 AND [AdvArea] IS NULL) OR ([AdvArea] = @Original_AdvArea)) AND ((@IsNull_AdvType = 1 AND [AdvType] IS NULL) OR ([AdvType] = @Original_AdvType)) AND ((@IsNull_contactTel = 1 AND [contactTel] IS NULL) OR ([contactTel] = @Original_contactTel)) AND ((@IsNull_contactMail = 1 AND [contactMail] IS NULL) OR ([contactMail] = @Original_contactMail)) AND ((@IsNull_UserName = 1 AND [UserName] IS NULL) OR ([UserName] = @Original_UserName)) AND ((@IsNull_NumOfAdvs = 1 AND [NumOfAdvs] IS NULL) OR ([NumOfAdvs] = @Original_NumOfAdvs)) AND ((@IsNull_Offert = 1 AND [Offert] IS NULL) OR ([Offert] = @Original_Offert)) AND ((@IsNull_InArh = 1 AND [InArh] IS NULL) OR ([InArh] = @Original_InArh)) AND ((@IsNull_area = 1 AND [area] IS NULL) OR ([area] = @Original_area)) AND ((@IsNull_Err = 1 AND [Err] IS NULL) OR ([Err] = @Original_Err)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Number" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Number" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateCreate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateCreate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateCreate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateCreate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateAdd" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateAdd" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateAdd" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateAdd" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateActual" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateActual" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateActual" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateActual" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateIns" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateIns" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateIns" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateIns" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeIns" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeIns" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeIns" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateTimeIns" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Source" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Source" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Source" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Source" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SourseRoot" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SourseRoot" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SourseRoot" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SourseRoot" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SourceFile" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SourceFile" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PSourceFile" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PSourceFile" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PSourceFile" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PSourceFile" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdvName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdvName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AdvName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdvText" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdvText" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AdvText" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvText" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdvNum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdvNum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AdvNum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvNum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cost" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Cost" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Cost" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CostType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CostType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_CostType" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="CostType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_addr_01_city" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="addr_01_city" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_addr_01_city" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_01_city" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_addr_03_street" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="addr_03_street" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_addr_03_street" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_03_street" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_addr_04_houseNum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="addr_04_houseNum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_addr_04_houseNum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_04_houseNum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_addr_05_microdistrict" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="addr_05_microdistrict" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_addr_05_microdistrict" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_05_microdistrict" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdvArea" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdvArea" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AdvArea" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvArea" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdvType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdvType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AdvType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_contactTel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="contactTel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_contactTel" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="contactTel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_contactMail" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="contactMail" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_contactMail" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="contactMail" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UserName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NumOfAdvs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumOfAdvs" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_NumOfAdvs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumOfAdvs" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Offert" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Offert" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Offert" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Offert" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InArh" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InArh" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_InArh" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="InArh" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_area" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="area" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_area" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="area" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Err" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Err" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Err" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Err" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[PLTradeADVS] ([Number], [DateCreate], [DateAdd], [DateActual], [DateIns], [DateTimeIns], [Source], [SourseRoot], [SourceFile], [PSourceFile], [AdvName], [AdvText], [AdvNum], [Cost], [CostType], [addr_01_city], [addr_03_street], [addr_04_houseNum], [addr_05_microdistrict], [AdvArea], [AdvType], [contactTel], [contactMail], [UserName], [NumOfAdvs], [Offert], [InArh], [area], [Err]) VALUES (@Number, @DateCreate, @DateAdd, @DateActual, @DateIns, @DateTimeIns, @Source, @SourseRoot, @SourceFile, @PSourceFile, @AdvName, @AdvText, @AdvNum, @Cost, @CostType, @addr_01_city, @addr_03_street, @addr_04_houseNum, @addr_05_microdistrict, @AdvArea, @AdvType, @contactTel, @contactMail, @UserName, @NumOfAdvs, @Offert, @InArh, @area, @Err);
+SELECT Number, DateCreate, DateAdd, DateActual, DateIns, DateTimeIns, Source, SourseRoot, SourceFile, PSourceFile, AdvName, AdvText, AdvNum, Cost, CostType, addr_01_city, addr_03_street, addr_04_houseNum, addr_05_microdistrict, AdvArea, AdvType, contactTel, contactMail, UserName, NumOfAdvs, Offert, InArh, area, Err FROM PLTradeADVS WHERE (SourceFile = @SourceFile)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Number" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateCreate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateCreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateAdd" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateAdd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateActual" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateActual" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateIns" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateIns" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeIns" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateTimeIns" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Source" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Source" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SourseRoot" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SourseRoot" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SourceFile" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SourceFile" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PSourceFile" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PSourceFile" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AdvName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AdvText" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvText" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AdvNum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvNum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Cost" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Cost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@CostType" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="CostType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@addr_01_city" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_01_city" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@addr_03_street" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_03_street" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@addr_04_houseNum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_04_houseNum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@addr_05_microdistrict" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_05_microdistrict" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AdvArea" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvArea" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AdvType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@contactTel" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="contactTel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@contactMail" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="contactMail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@NumOfAdvs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumOfAdvs" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Offert" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Offert" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@InArh" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="InArh" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@area" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="area" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Err" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Err" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Number, DateCreate, DateAdd, DateActual, DateIns, DateTimeIns, Source, SourseRoot, SourceFile, PSourceFile, AdvName, AdvText, AdvNum, Cost, CostType, addr_01_city, addr_03_street, addr_04_houseNum, addr_05_microdistrict, AdvArea, AdvType, contactTel, contactMail, UserName, NumOfAdvs, Offert, InArh, area, Err FROM dbo.PLTradeADVS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[PLTradeADVS] SET [Number] = @Number, [DateCreate] = @DateCreate, [DateAdd] = @DateAdd, [DateActual] = @DateActual, [DateIns] = @DateIns, [DateTimeIns] = @DateTimeIns, [Source] = @Source, [SourseRoot] = @SourseRoot, [SourceFile] = @SourceFile, [PSourceFile] = @PSourceFile, [AdvName] = @AdvName, [AdvText] = @AdvText, [AdvNum] = @AdvNum, [Cost] = @Cost, [CostType] = @CostType, [addr_01_city] = @addr_01_city, [addr_03_street] = @addr_03_street, [addr_04_houseNum] = @addr_04_houseNum, [addr_05_microdistrict] = @addr_05_microdistrict, [AdvArea] = @AdvArea, [AdvType] = @AdvType, [contactTel] = @contactTel, [contactMail] = @contactMail, [UserName] = @UserName, [NumOfAdvs] = @NumOfAdvs, [Offert] = @Offert, [InArh] = @InArh, [area] = @area, [Err] = @Err WHERE (((@IsNull_Number = 1 AND [Number] IS NULL) OR ([Number] = @Original_Number)) AND ((@IsNull_DateCreate = 1 AND [DateCreate] IS NULL) OR ([DateCreate] = @Original_DateCreate)) AND ((@IsNull_DateAdd = 1 AND [DateAdd] IS NULL) OR ([DateAdd] = @Original_DateAdd)) AND ((@IsNull_DateActual = 1 AND [DateActual] IS NULL) OR ([DateActual] = @Original_DateActual)) AND ((@IsNull_DateIns = 1 AND [DateIns] IS NULL) OR ([DateIns] = @Original_DateIns)) AND ((@IsNull_DateTimeIns = 1 AND [DateTimeIns] IS NULL) OR ([DateTimeIns] = @Original_DateTimeIns)) AND ((@IsNull_Source = 1 AND [Source] IS NULL) OR ([Source] = @Original_Source)) AND ((@IsNull_SourseRoot = 1 AND [SourseRoot] IS NULL) OR ([SourseRoot] = @Original_SourseRoot)) AND ([SourceFile] = @Original_SourceFile) AND ((@IsNull_PSourceFile = 1 AND [PSourceFile] IS NULL) OR ([PSourceFile] = @Original_PSourceFile)) AND ((@IsNull_AdvName = 1 AND [AdvName] IS NULL) OR ([AdvName] = @Original_AdvName)) AND ((@IsNull_AdvText = 1 AND [AdvText] IS NULL) OR ([AdvText] = @Original_AdvText)) AND ((@IsNull_AdvNum = 1 AND [AdvNum] IS NULL) OR ([AdvNum] = @Original_AdvNum)) AND ((@IsNull_Cost = 1 AND [Cost] IS NULL) OR ([Cost] = @Original_Cost)) AND ((@IsNull_CostType = 1 AND [CostType] IS NULL) OR ([CostType] = @Original_CostType)) AND ((@IsNull_addr_01_city = 1 AND [addr_01_city] IS NULL) OR ([addr_01_city] = @Original_addr_01_city)) AND ((@IsNull_addr_03_street = 1 AND [addr_03_street] IS NULL) OR ([addr_03_street] = @Original_addr_03_street)) AND ((@IsNull_addr_04_houseNum = 1 AND [addr_04_houseNum] IS NULL) OR ([addr_04_houseNum] = @Original_addr_04_houseNum)) AND ((@IsNull_addr_05_microdistrict = 1 AND [addr_05_microdistrict] IS NULL) OR ([addr_05_microdistrict] = @Original_addr_05_microdistrict)) AND ((@IsNull_AdvArea = 1 AND [AdvArea] IS NULL) OR ([AdvArea] = @Original_AdvArea)) AND ((@IsNull_AdvType = 1 AND [AdvType] IS NULL) OR ([AdvType] = @Original_AdvType)) AND ((@IsNull_contactTel = 1 AND [contactTel] IS NULL) OR ([contactTel] = @Original_contactTel)) AND ((@IsNull_contactMail = 1 AND [contactMail] IS NULL) OR ([contactMail] = @Original_contactMail)) AND ((@IsNull_UserName = 1 AND [UserName] IS NULL) OR ([UserName] = @Original_UserName)) AND ((@IsNull_NumOfAdvs = 1 AND [NumOfAdvs] IS NULL) OR ([NumOfAdvs] = @Original_NumOfAdvs)) AND ((@IsNull_Offert = 1 AND [Offert] IS NULL) OR ([Offert] = @Original_Offert)) AND ((@IsNull_InArh = 1 AND [InArh] IS NULL) OR ([InArh] = @Original_InArh)) AND ((@IsNull_area = 1 AND [area] IS NULL) OR ([area] = @Original_area)) AND ((@IsNull_Err = 1 AND [Err] IS NULL) OR ([Err] = @Original_Err)));
+SELECT Number, DateCreate, DateAdd, DateActual, DateIns, DateTimeIns, Source, SourseRoot, SourceFile, PSourceFile, AdvName, AdvText, AdvNum, Cost, CostType, addr_01_city, addr_03_street, addr_04_houseNum, addr_05_microdistrict, AdvArea, AdvType, contactTel, contactMail, UserName, NumOfAdvs, Offert, InArh, area, Err FROM PLTradeADVS WHERE (SourceFile = @SourceFile)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Number" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateCreate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateCreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateAdd" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateAdd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateActual" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateActual" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateIns" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateIns" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTimeIns" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateTimeIns" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Source" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Source" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SourseRoot" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SourseRoot" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SourceFile" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SourceFile" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PSourceFile" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PSourceFile" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AdvName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AdvText" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvText" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AdvNum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvNum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Cost" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Cost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@CostType" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="CostType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@addr_01_city" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_01_city" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@addr_03_street" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_03_street" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@addr_04_houseNum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_04_houseNum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@addr_05_microdistrict" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_05_microdistrict" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AdvArea" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvArea" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AdvType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@contactTel" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="contactTel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@contactMail" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="contactMail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@NumOfAdvs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumOfAdvs" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Offert" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Offert" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@InArh" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="InArh" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@area" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="area" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Err" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Err" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Number" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Number" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Number" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateCreate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateCreate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateCreate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateCreate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateAdd" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateAdd" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateAdd" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateAdd" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateActual" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateActual" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateActual" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateActual" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateIns" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateIns" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateIns" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateIns" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DateTimeIns" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DateTimeIns" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTimeIns" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="DateTimeIns" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Source" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Source" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Source" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Source" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SourseRoot" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SourseRoot" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SourseRoot" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SourseRoot" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SourceFile" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SourceFile" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PSourceFile" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PSourceFile" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PSourceFile" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PSourceFile" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdvName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdvName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AdvName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdvText" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdvText" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AdvText" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvText" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdvNum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdvNum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AdvNum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvNum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Cost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Cost" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_Cost" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="Cost" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CostType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CostType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_CostType" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="CostType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_addr_01_city" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="addr_01_city" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_addr_01_city" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_01_city" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_addr_03_street" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="addr_03_street" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_addr_03_street" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_03_street" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_addr_04_houseNum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="addr_04_houseNum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_addr_04_houseNum" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_04_houseNum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_addr_05_microdistrict" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="addr_05_microdistrict" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_addr_05_microdistrict" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="addr_05_microdistrict" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdvArea" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdvArea" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AdvArea" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvArea" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AdvType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AdvType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AdvType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AdvType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_contactTel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="contactTel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_contactTel" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="contactTel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_contactMail" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="contactMail" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_contactMail" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="contactMail" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_UserName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NumOfAdvs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumOfAdvs" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_NumOfAdvs" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumOfAdvs" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Offert" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Offert" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Offert" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Offert" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_InArh" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="InArh" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_InArh" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="InArh" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_area" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="area" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_area" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="area" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Err" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Err" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Err" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Err" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Number" DataSetColumn="Number" />
+              <Mapping SourceColumn="DateCreate" DataSetColumn="DateCreate" />
+              <Mapping SourceColumn="DateAdd" DataSetColumn="DateAdd" />
+              <Mapping SourceColumn="DateActual" DataSetColumn="DateActual" />
+              <Mapping SourceColumn="DateIns" DataSetColumn="DateIns" />
+              <Mapping SourceColumn="DateTimeIns" DataSetColumn="DateTimeIns" />
+              <Mapping SourceColumn="Source" DataSetColumn="Source" />
+              <Mapping SourceColumn="SourseRoot" DataSetColumn="SourseRoot" />
+              <Mapping SourceColumn="SourceFile" DataSetColumn="SourceFile" />
+              <Mapping SourceColumn="PSourceFile" DataSetColumn="PSourceFile" />
+              <Mapping SourceColumn="AdvName" DataSetColumn="AdvName" />
+              <Mapping SourceColumn="AdvText" DataSetColumn="AdvText" />
+              <Mapping SourceColumn="AdvNum" DataSetColumn="AdvNum" />
+              <Mapping SourceColumn="Cost" DataSetColumn="Cost" />
+              <Mapping SourceColumn="CostType" DataSetColumn="CostType" />
+              <Mapping SourceColumn="addr_01_city" DataSetColumn="addr_01_city" />
+              <Mapping SourceColumn="addr_03_street" DataSetColumn="addr_03_street" />
+              <Mapping SourceColumn="addr_04_houseNum" DataSetColumn="addr_04_houseNum" />
+              <Mapping SourceColumn="addr_05_microdistrict" DataSetColumn="addr_05_microdistrict" />
+              <Mapping SourceColumn="AdvArea" DataSetColumn="AdvArea" />
+              <Mapping SourceColumn="AdvType" DataSetColumn="AdvType" />
+              <Mapping SourceColumn="contactTel" DataSetColumn="contactTel" />
+              <Mapping SourceColumn="contactMail" DataSetColumn="contactMail" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+              <Mapping SourceColumn="NumOfAdvs" DataSetColumn="NumOfAdvs" />
+              <Mapping SourceColumn="Offert" DataSetColumn="Offert" />
+              <Mapping SourceColumn="InArh" DataSetColumn="InArh" />
+              <Mapping SourceColumn="area" DataSetColumn="area" />
+              <Mapping SourceColumn="Err" DataSetColumn="Err" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="_advs_2_restored_АлинаDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_advs_2_restored_АлинаDataSet3" msprop:Generator_UserDSName="_advs_2_restored_АлинаDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PLTradeADVS" msprop:Generator_TableClassName="PLTradeADVSDataTable" msprop:Generator_TableVarName="tablePLTradeADVS" msprop:Generator_TablePropName="PLTradeADVS" msprop:Generator_RowDeletingName="PLTradeADVSRowDeleting" msprop:Generator_RowChangingName="PLTradeADVSRowChanging" msprop:Generator_RowEvHandlerName="PLTradeADVSRowChangeEventHandler" msprop:Generator_RowDeletedName="PLTradeADVSRowDeleted" msprop:Generator_UserTableName="PLTradeADVS" msprop:Generator_RowChangedName="PLTradeADVSRowChanged" msprop:Generator_RowEvArgName="PLTradeADVSRowChangeEvent" msprop:Generator_RowClassName="PLTradeADVSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Number" msprop:Generator_ColumnVarNameInTable="columnNumber" msprop:Generator_ColumnPropNameInRow="Number" msprop:Generator_ColumnPropNameInTable="NumberColumn" msprop:Generator_UserColumnName="Number" type="xs:int" minOccurs="0" />
+              <xs:element name="DateCreate" msprop:Generator_ColumnVarNameInTable="columnDateCreate" msprop:Generator_ColumnPropNameInRow="DateCreate" msprop:Generator_ColumnPropNameInTable="DateCreateColumn" msprop:Generator_UserColumnName="DateCreate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateAdd" msprop:Generator_ColumnVarNameInTable="columnDateAdd" msprop:Generator_ColumnPropNameInRow="DateAdd" msprop:Generator_ColumnPropNameInTable="DateAddColumn" msprop:Generator_UserColumnName="DateAdd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateActual" msprop:Generator_ColumnVarNameInTable="columnDateActual" msprop:Generator_ColumnPropNameInRow="DateActual" msprop:Generator_ColumnPropNameInTable="DateActualColumn" msprop:Generator_UserColumnName="DateActual" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateIns" msprop:Generator_ColumnVarNameInTable="columnDateIns" msprop:Generator_ColumnPropNameInRow="DateIns" msprop:Generator_ColumnPropNameInTable="DateInsColumn" msprop:Generator_UserColumnName="DateIns" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateTimeIns" msprop:Generator_ColumnVarNameInTable="columnDateTimeIns" msprop:Generator_ColumnPropNameInRow="DateTimeIns" msprop:Generator_ColumnPropNameInTable="DateTimeInsColumn" msprop:Generator_UserColumnName="DateTimeIns" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Source" msprop:Generator_ColumnVarNameInTable="columnSource" msprop:Generator_ColumnPropNameInRow="Source" msprop:Generator_ColumnPropNameInTable="SourceColumn" msprop:Generator_UserColumnName="Source" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SourseRoot" msprop:Generator_ColumnVarNameInTable="columnSourseRoot" msprop:Generator_ColumnPropNameInRow="SourseRoot" msprop:Generator_ColumnPropNameInTable="SourseRootColumn" msprop:Generator_UserColumnName="SourseRoot" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SourceFile" msprop:Generator_ColumnVarNameInTable="columnSourceFile" msprop:Generator_ColumnPropNameInRow="SourceFile" msprop:Generator_ColumnPropNameInTable="SourceFileColumn" msprop:Generator_UserColumnName="SourceFile">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PSourceFile" msprop:Generator_ColumnVarNameInTable="columnPSourceFile" msprop:Generator_ColumnPropNameInRow="PSourceFile" msprop:Generator_ColumnPropNameInTable="PSourceFileColumn" msprop:Generator_UserColumnName="PSourceFile" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AdvName" msprop:Generator_ColumnVarNameInTable="columnAdvName" msprop:Generator_ColumnPropNameInRow="AdvName" msprop:Generator_ColumnPropNameInTable="AdvNameColumn" msprop:Generator_UserColumnName="AdvName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AdvText" msprop:Generator_ColumnVarNameInTable="columnAdvText" msprop:Generator_ColumnPropNameInRow="AdvText" msprop:Generator_ColumnPropNameInTable="AdvTextColumn" msprop:Generator_UserColumnName="AdvText" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AdvNum" msprop:Generator_ColumnVarNameInTable="columnAdvNum" msprop:Generator_ColumnPropNameInRow="AdvNum" msprop:Generator_ColumnPropNameInTable="AdvNumColumn" msprop:Generator_UserColumnName="AdvNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cost" msprop:Generator_ColumnVarNameInTable="columnCost" msprop:Generator_ColumnPropNameInRow="Cost" msprop:Generator_ColumnPropNameInTable="CostColumn" msprop:Generator_UserColumnName="Cost" type="xs:long" minOccurs="0" />
+              <xs:element name="CostType" msprop:Generator_ColumnVarNameInTable="columnCostType" msprop:Generator_ColumnPropNameInRow="CostType" msprop:Generator_ColumnPropNameInTable="CostTypeColumn" msprop:Generator_UserColumnName="CostType" type="xs:boolean" minOccurs="0" />
+              <xs:element name="addr_01_city" msprop:Generator_ColumnVarNameInTable="columnaddr_01_city" msprop:Generator_ColumnPropNameInRow="addr_01_city" msprop:Generator_ColumnPropNameInTable="addr_01_cityColumn" msprop:Generator_UserColumnName="addr_01_city" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="addr_03_street" msprop:Generator_ColumnVarNameInTable="columnaddr_03_street" msprop:Generator_ColumnPropNameInRow="addr_03_street" msprop:Generator_ColumnPropNameInTable="addr_03_streetColumn" msprop:Generator_UserColumnName="addr_03_street" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="addr_04_houseNum" msprop:Generator_ColumnVarNameInTable="columnaddr_04_houseNum" msprop:Generator_ColumnPropNameInRow="addr_04_houseNum" msprop:Generator_ColumnPropNameInTable="addr_04_houseNumColumn" msprop:Generator_UserColumnName="addr_04_houseNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="addr_05_microdistrict" msprop:Generator_ColumnVarNameInTable="columnaddr_05_microdistrict" msprop:Generator_ColumnPropNameInRow="addr_05_microdistrict" msprop:Generator_ColumnPropNameInTable="addr_05_microdistrictColumn" msprop:Generator_UserColumnName="addr_05_microdistrict" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AdvArea" msprop:Generator_ColumnVarNameInTable="columnAdvArea" msprop:Generator_ColumnPropNameInRow="AdvArea" msprop:Generator_ColumnPropNameInTable="AdvAreaColumn" msprop:Generator_UserColumnName="AdvArea" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AdvType" msprop:Generator_ColumnVarNameInTable="columnAdvType" msprop:Generator_ColumnPropNameInRow="AdvType" msprop:Generator_ColumnPropNameInTable="AdvTypeColumn" msprop:Generator_UserColumnName="AdvType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contactTel" msprop:Generator_ColumnVarNameInTable="columncontactTel" msprop:Generator_ColumnPropNameInRow="contactTel" msprop:Generator_ColumnPropNameInTable="contactTelColumn" msprop:Generator_UserColumnName="contactTel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contactMail" msprop:Generator_ColumnVarNameInTable="columncontactMail" msprop:Generator_ColumnPropNameInRow="contactMail" msprop:Generator_ColumnPropNameInTable="contactMailColumn" msprop:Generator_UserColumnName="contactMail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumOfAdvs" msprop:Generator_ColumnVarNameInTable="columnNumOfAdvs" msprop:Generator_ColumnPropNameInRow="NumOfAdvs" msprop:Generator_ColumnPropNameInTable="NumOfAdvsColumn" msprop:Generator_UserColumnName="NumOfAdvs" type="xs:int" minOccurs="0" />
+              <xs:element name="Offert" msprop:Generator_ColumnVarNameInTable="columnOffert" msprop:Generator_ColumnPropNameInRow="Offert" msprop:Generator_ColumnPropNameInTable="OffertColumn" msprop:Generator_UserColumnName="Offert" type="xs:boolean" minOccurs="0" />
+              <xs:element name="InArh" msprop:Generator_ColumnVarNameInTable="columnInArh" msprop:Generator_ColumnPropNameInRow="InArh" msprop:Generator_ColumnPropNameInTable="InArhColumn" msprop:Generator_UserColumnName="InArh" type="xs:boolean" minOccurs="0" />
+              <xs:element name="area" msprop:Generator_ColumnVarNameInTable="columnarea" msprop:Generator_ColumnPropNameInRow="area" msprop:Generator_ColumnPropNameInTable="areaColumn" msprop:Generator_UserColumnName="area" type="xs:int" minOccurs="0" />
+              <xs:element name="Err" msprop:Generator_ColumnVarNameInTable="columnErr" msprop:Generator_ColumnPropNameInRow="Err" msprop:Generator_ColumnPropNameInTable="ErrColumn" msprop:Generator_UserColumnName="Err" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PLTradeADVS" />
+      <xs:field xpath="mstns:SourceFile" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
